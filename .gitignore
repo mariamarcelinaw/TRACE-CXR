@@ -1,0 +1,29 @@
+# Do not track data, checkpoints, secrets, archives, or run outputs
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+*.key
+*.pem
+id_rsa*
+raw_data/
+# keep only the public RSNA partition list under data/
+data/*
+!data/rsna_split_manifest.csv
+checkpoints/
+weights/
+reports/
+outputs/
+*.pt
+*.pth
+*.dcm
+*.npz
+*.zip
+*.tar*
+.ipynb_checkpoints/
+.DS_Store
+
+# private inputs of analysis/latency/benchmark_interleaved.py
+analysis/latency/reference/

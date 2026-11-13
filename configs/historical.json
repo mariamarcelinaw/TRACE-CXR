@@ -1,0 +1,197 @@
+{
+  "archived_aopc": {
+    "inception_v3": 0.0202,
+    "swin_b": 0.077
+  },
+  "archived_kermany_preprocessing_versions": {
+    "note": "KermanyNorm (RSNA-consistent percentile scaling) was adopted after KermanyRaw predictions existed; no Kermany labels were used for fitting; both versions are reported.",
+    "primary": "KermanyNorm",
+    "roc_auc": {
+      "KermanyNorm": {
+        "const_alpha": 0.9203594126671047,
+        "gated_fusion": 0.9206223975454744,
+        "inception_v3": 0.7990028490028489,
+        "logit_stack": 0.9166337935568704,
+        "mean_fusion": 0.9150668419899188,
+        "swin_b": 0.9377383300460224
+      },
+      "KermanyRaw": {
+        "const_alpha": 0.9276024545255316,
+        "gated_fusion": 0.9277120315581854,
+        "inception_v3": 0.825180802103879,
+        "logit_stack": 0.922518080210388,
+        "mean_fusion": 0.9233289502520272,
+        "swin_b": 0.9362699978084592
+      }
+    }
+  },
+  "archived_latency_benchmark": {
+    "candidate_means_ms": {
+      "const_alpha": 113.48500905166667,
+      "gated_fusion": 113.24617043833334,
+      "inception_v3": 91.41254606833333,
+      "logit_stack": 112.73486433666667,
+      "mean_fusion": 112.94000018833334,
+      "swin_b": 100.42182766
+    },
+    "design": "interleaved six-candidate end-to-end benchmark; 200 RSNA images x 3 rounds; batch 1; one A100-SXM4-40GB session; DICOM read to CPU decision",
+    "n_per_candidate": 600,
+    "paired_gate_minus_swin_ms": 12.824342778333332,
+    "superseded_design_note": "An earlier sequential-block benchmark drifted across rounds (gate minus Swin-B +2.37 ms, sign changing between rounds) and was replaced by the interleaved design."
+  },
+  "authorization": {
+    "excluded": "datasets, images, labels, per-image predictions and NIH patient identifiers; RSNA image identifiers (patientId) appear only in data/rsna_split_manifest.csv; model weights are Release v1.0.0 assets, not repository files",
+    "repository_license": "MIT"
+  },
+  "candidate_names": [
+    "inception_v3",
+    "swin_b",
+    "mean_fusion",
+    "const_alpha",
+    "gated_fusion",
+    "logit_stack"
+  ],
+  "control_lock": {
+    "bootstrap": {
+      "delta": "full-sample point estimate",
+      "interval": "percentile 95%",
+      "n_boot": 2000,
+      "seed": 20260908,
+      "unit": "technical image"
+    },
+    "const_alpha_inception": 0.44714701281773855,
+    "created_utc": "2026-09-23T11:22:35.377993+00:00",
+    "external_tuning": false,
+    "fitted_on": {
+      "fusion_weights": "RSNA development OOF only",
+      "temperature_threshold": "RSNA calibration only"
+    },
+    "input_sha256": {
+      "TRACE_CXR_CALIBRATION_PREDICTIONS.csv": "1e2de52b1a1a4de2ba252512cc50fdbf93a2ba8732061a58ea5a78c336906d1f",
+      "TRACE_CXR_DEPLOYMENT_LOCK.json": "43173aae7dbcabbb6283eeac37436be3f557f615c770f429aec74c651d6483be",
+      "TRACE_CXR_INTERNAL_PREDICTIONS.csv": "35bc66b860096d8eade6cf0c1a22459359657ca8720413c20c8d5338ebd7b695",
+      "TRACE_CXR_KERMANY_PREDICTIONS.csv": "3bde489f4b99d38f9da02cff97a06c9dc7464bf90b3c95850d413c1429f87cc6",
+      "TRACE_CXR_OOF_FUSION.csv": "1890d868b1b6ac4c03b7752954bf4abb95e005bce1dc37453ed2a6f67f41775e"
+    },
+    "logit_stack": {
+      "coef_logit_inception": 0.3758600346719033,
+      "coef_logit_swin": 0.40635942074880366,
+      "intercept": -0.191194543362135
+    },
+    "models": {
+      "const_alpha": {
+        "calibration_balanced_accuracy": 0.8186923309635457,
+        "temperature": 1.0307804086611576,
+        "threshold": 0.2610958433173872
+      },
+      "gated_fusion": {
+        "calibration_balanced_accuracy": 0.8187989392276573,
+        "temperature": 1.0301158923782472,
+        "threshold": 0.2600688858053229
+      },
+      "inception_v3": {
+        "calibration_balanced_accuracy": 0.8115950366410593,
+        "temperature": 1.2560578710947896,
+        "threshold": 0.251865193234492
+      },
+      "logit_stack": {
+        "calibration_balanced_accuracy": 0.8178889471770132,
+        "temperature": 0.9031278838637595,
+        "threshold": 0.23568252355285493
+      },
+      "mean_fusion": {
+        "calibration_balanced_accuracy": 0.8182087719693483,
+        "temperature": 1.039541541884761,
+        "threshold": 0.2623692681780993
+      },
+      "swin_b": {
+        "calibration_balanced_accuracy": 0.8141194398761574,
+        "temperature": 1.0466943241814093,
+        "threshold": 0.25824970741070546
+      }
+    }
+  },
+  "dataset_scope": "RSNA competition image-identifier-level split",
+  "experiment_scopes": {
+    "adaptation": "retrospective_adaptation",
+    "benchmark": "independent_benchmark",
+    "corrected": "corrected_development",
+    "external_exploratory": "exploratory_corrected",
+    "historical": "historical_frozen"
+  },
+  "external_claim_limits": {
+    "corrected_fold_ensemble": "EXPLORATORY_CORRECTED",
+    "full_development_refit": "NOT_EXECUTED",
+    "full_xai_map_replay": "NOT_EXECUTED",
+    "nih_patient_independence": "CHECKED_NOT_PATIENT_DISJOINT"
+  },
+  "fitting_roles": {
+    "external_kermany": "evaluation_only",
+    "fusion": "development_oof",
+    "temperature_threshold": "rsna_calibration"
+  },
+  "historical_training": {
+    "accumulation_steps": 4,
+    "batch_size": 4,
+    "epochs": 60,
+    "inception_lr": 0.0001,
+    "optimizer": "AdamW",
+    "pretrained_weight_symbols": [
+      "Inception_V3_Weights.DEFAULT",
+      "Swin_B_Weights.DEFAULT"
+    ],
+    "swin_lr": 5e-05
+  },
+  "kermany_patients": 427,
+  "n_rsna": 26684,
+  "preprocessing": {
+    "imagenet_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "imagenet_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "inception_transform_input": true,
+    "interpolation": "bicubic",
+    "percentile_clip": [
+      0.5,
+      99.5
+    ],
+    "size": 320
+  },
+  "project": "TRACE-CXR",
+  "retrospective_adaptation_rules": {
+    "budgets": [
+      10,
+      20,
+      50,
+      100,
+      200
+    ],
+    "draws_per_budget": 500,
+    "logistic": {
+      "C": 1.0,
+      "intercept_penalized": false,
+      "penalty": "l2",
+      "slope_constrained": false,
+      "solver": "lbfgs"
+    },
+    "scope": "retrospective, uses Kermany labels, separate from frozen external evaluation",
+    "stratified_positive_count": "round(0.625 * n)",
+    "threshold_rule": {
+      "full_logistic": "labeled-subset prevalence",
+      "intercept_only": "frozen RSNA threshold",
+      "threshold_only": "re-selected BA-maximizing threshold on the labeled subset"
+    }
+  },
+  "split_sizes": {
+    "calibration": 2669,
+    "development": 18678,
+    "locked_test": 5337
+  },
+  "study_id": "trace_cxr_inception_swinb_v2"
+}

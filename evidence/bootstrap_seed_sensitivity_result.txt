@@ -1,0 +1,4 @@
+full-sample delta BA +0.00739
+archived seed 20260908, 2,000 resamples: [+0.00045, +0.01409]
+seeds 1-200, 2,000 resamples each: lower bound median +0.00050, range [-0.00024, +0.00097], share <= 0: 0.025
+seed 20260908, 20,000 resamples: [+0.00040, +0.01433]; share of resamples <= 0: 0.0192

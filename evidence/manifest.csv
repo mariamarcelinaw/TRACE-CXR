@@ -1,0 +1,14 @@
+artifact,evidence_type,scientific_scope,distribution_status
+verified_results.csv,archived aggregate results traced to study result files,aggregate only,public under MIT License
+reliability_bins.csv,15-bin reliability values computed from archived calibrated scores and frozen lock,aggregate only (bin counts and rates),public under MIT License
+calibration_summary.csv,calibration intercept/slope/NLL/Brier/ECE15 computed from archived calibrated scores and frozen lock,aggregate only,public under MIT License
+recalibration_draw_summary.csv,replicate 500-draw local-recalibration summary (mean and 2.5-97.5th percentiles),aggregate only,public under MIT License
+recalibration_draw_distribution.csv,replicate draw distributions incl. median/SD/quartiles/min/max and fitted intercept/slope,aggregate only,public under MIT License
+recalibration_poor_adaptation.csv,pre-specified paired poor-adaptation event rates versus frozen (P1-P6),aggregate only,public under MIT License
+recalibration_primary_run_distribution.csv,primary-run (Table IV) draw distributions with convergence and slope diagnostics,aggregate only,public under MIT License
+recalibration_unstratified_class_mix.csv,class composition of the labeled subsets per budget and sampling strategy (shared by all models),aggregate only,public under MIT License
+patient_overlap_result.txt,NIH-patient counts and overlap per partition; image- and patient-level bootstrap on full and patient-disjoint locked test,aggregate only (no identifiers),public under MIT License
+patient_overlap_extra_result.txt,mapping audit; per-fold patient sharing; frozen-threshold Se/Sp on the patient-disjoint subset,aggregate only (no identifiers),public under MIT License
+prior_source_sensitivity.csv,EM prior correction and true-prevalence reference on KermanyNorm under two source-prior definitions (mean calibrated score; observed prevalence),aggregate only,public under MIT License
+recalibration_gate_vs_swin_paired.csv,gate-minus-Swin-B logistic-recalibration differences on identical replicate draws,aggregate only (per budget and sampling strategy),public under MIT License
+bootstrap_seed_sensitivity_result.txt,Monte Carlo stability of the RSNA gate-minus-Swin-B BA bootstrap interval,aggregate only,public under MIT License
