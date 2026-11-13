@@ -1,0 +1,20 @@
+name: CPU reproducibility checks
+"on":
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Syntax and imports
+        run: |
+          python -m compileall -q reproduce.py pipeline.py audit.py tests
+          python reproduce.py --help
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Safe archived-evidence verification
+        run: python reproduce.py all --output-root reports/ci

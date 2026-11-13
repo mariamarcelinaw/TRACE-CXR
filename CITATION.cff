@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "TRACE-CXR"
+type: software
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/mariamarcelinaw/TRACE-CXR"
+abstract: >-
+  Historical training code, frozen-model release, CPU-only evidence checker and aggregate results for a controlled evaluation of
+  reliability-gated InceptionV3/Swin-B fusion and calibration transport for
+  pneumonia classification on chest X-rays.
+keywords:
+  - pneumonia
+  - chest X-ray
+  - ensemble fusion
+  - calibration
+  - external validation
+authors:
+  - family-names: Widyastuti
+    given-names: Maria Marcelina
+    affiliation: "Institut Teknologi Sepuluh Nopember"
+  - family-names: Fatichah
+    given-names: Chastine
+    affiliation: "Institut Teknologi Sepuluh Nopember"
+  - family-names: Sunaryono
+    given-names: Dwi
+    affiliation: "Institut Teknologi Sepuluh Nopember"
+preferred-citation:
+  type: conference-paper
+  title: "TRACE-CXR: Evaluating Reliability-Aware Fusion and Calibration Transport for Pneumonia Classification on Chest X-Rays"
+  authors:
+    - family-names: Widyastuti
+      given-names: Maria Marcelina
+    - family-names: Fatichah
+      given-names: Chastine
+    - family-names: Sunaryono
+      given-names: Dwi
+  conference:
+    name: "2026 19th International Conference on Development in eSystem Engineering (DeSE)"
+  year: 2026
+  publisher:
+    name: IEEE

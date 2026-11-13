@@ -1,0 +1,6 @@
+# Output of analysis/gate_convergence_check.py on the private TRACE_CXR_OOF_FUSION.csv (18,678 development OOF rows)
+# and TRACE_CXR_RSNA_SPLIT_MANIFEST.csv; development data only, no test data. Cross-fitted over the five OOF folds.
+g60: held-out OOF AUC 0.8894 BCE 0.3384 alpha range 0.395-0.503 sd 0.018
+gconv: held-out OOF AUC 0.8887 BCE 0.3387 alpha range 0.086-0.834 sd 0.091
+const: held-out OOF AUC 0.8894 BCE 0.3385
+swin 0.8813 mean 0.8892

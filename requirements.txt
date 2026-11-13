@@ -1,0 +1,5 @@
+# The safe CPU evidence CLI and tests use only Python 3.10+ standard library.
+# Historical GPU inference requires separately managed PyTorch, torchvision,
+# pydicom, Pillow, NumPy, pandas and original model/data assets.
+# analysis/gate_convergence_check.py needs numpy, scipy and scikit-learn plus the
+# private out-of-fold and split files.

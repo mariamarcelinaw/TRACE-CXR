@@ -1,0 +1,13 @@
+model,pi_s_definition,pi_s,pi_t_EM,ECE15_frozen,ECE15_EM,ECE15_true_prevalence_reference,n_calibration,n_kermany
+inception_v3,mean_score,0.2533,0.174,0.3853,0.451,0.0998,2669,624
+inception_v3,observed,0.2252,0.3199,0.3853,0.3051,0.077,2669,624
+swin_b,mean_score,0.2541,0.2755,0.3659,0.3495,0.1319,2669,624
+swin_b,observed,0.2252,0.3714,0.3659,0.2536,0.1128,2669,624
+mean_fusion,mean_score,0.2475,0.1821,0.3892,0.4429,0.1534,2669,624
+mean_fusion,observed,0.2252,0.2873,0.3892,0.3377,0.1289,2669,624
+gated_fusion,mean_score,0.2469,0.1818,0.3898,0.4432,0.1449,2669,624
+gated_fusion,observed,0.2252,0.2829,0.3898,0.3421,0.1344,2669,624
+const_alpha,mean_score,0.2477,0.1897,0.3879,0.4353,0.139,2669,624
+const_alpha,observed,0.2252,0.2933,0.3879,0.3319,0.1343,2669,624
+logit_stack,mean_score,0.2286,0.1136,0.4154,0.5114,0.1519,2669,624
+logit_stack,observed,0.2252,0.1299,0.4154,0.4951,0.1497,2669,624

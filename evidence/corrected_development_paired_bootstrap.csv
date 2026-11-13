@@ -1,0 +1,9 @@
+comparison,metric,delta,ci_low,ci_high,valid_resamples,resampling_unit
+gated_fusion_minus_swin_b,roc_auc,0.004986,0.003685,0.006507,500,image (RSNA patientId)
+gated_fusion_minus_swin_b,brier,-0.002624,-0.003320,-0.001941,500,image (RSNA patientId)
+gated_fusion_minus_mean_fusion,roc_auc,0.000292,-0.000111,0.000719,500,image (RSNA patientId)
+gated_fusion_minus_mean_fusion,brier,-0.000373,-0.000615,-0.000130,500,image (RSNA patientId)
+gated_fusion_minus_const_alpha,roc_auc,0.000164,0.000011,0.000296,500,image (RSNA patientId)
+gated_fusion_minus_const_alpha,brier,-0.000174,-0.000244,-0.000100,500,image (RSNA patientId)
+gated_fusion_minus_logit_stack,roc_auc,0.000463,-0.000048,0.000935,500,image (RSNA patientId)
+gated_fusion_minus_logit_stack,brier,0.000532,0.000137,0.000931,500,image (RSNA patientId)
