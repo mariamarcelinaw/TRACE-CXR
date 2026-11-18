@@ -1,0 +1,13 @@
+mapping records 30000; unique RSNA ids 30000; unique NIH images 30000; img_id pattern ok 30000
+split rows 26684; unmapped 0; duplicate NIH images 0
+patients 11452; with >1 image 4355; max images per patient 65
+OOF fold 0: patients 2847, shared with other folds 1608
+OOF fold 1: patients 2812, shared with other folds 1534
+OOF fold 2: patients 2799, shared with other folds 1531
+OOF fold 3: patients 2821, shared with other folds 1552
+OOF fold 4: patients 2828, shared with other folds 1596
+patient-disjoint locked-test subset: 1598 images, 1497 patients, 121 positives
+gated_fusion patient-disjoint Se 0.595  Sp 0.934
+gated_fusion full test        Se 0.851  Sp 0.791
+swin_b       patient-disjoint Se 0.595  Sp 0.924
+swin_b       full test        Se 0.853  Sp 0.775

@@ -1,0 +1,7 @@
+# Reported historical environment (not re-created by this public CPU test setup)
+python: 3.13.12
+torch: 2.10.0+cu128
+torchvision: 0.25.0+cu128
+cuda: '12.8'
+hardware: NVIDIA A100-SXM4-40GB
+verification: HISTORICAL_MANIFEST_ONLY

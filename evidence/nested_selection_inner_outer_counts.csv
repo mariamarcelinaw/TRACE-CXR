@@ -1,0 +1,6 @@
+outer_fold,seed,inner_train_n,inner_train_neg,inner_train_pos,inner_val_n,inner_val_neg,inner_val_pos,outer_heldout_n,outer_heldout_neg,outer_heldout_pos,image_id_disjoint,biological_patient_disjoint
+0,20265008,13148,10185,2963,1794,1390,404,3736,2894,842,True,NOT_VERIFIED
+1,20266017,13148,10185,2963,1794,1390,404,3736,2894,842,True,NOT_VERIFIED
+2,20267026,13148,10185,2963,1794,1390,404,3736,2894,842,True,NOT_VERIFIED
+3,20268035,13149,10186,2963,1794,1390,404,3735,2893,842,True,NOT_VERIFIED
+4,20269044,13149,10185,2964,1794,1390,404,3735,2894,841,True,NOT_VERIFIED

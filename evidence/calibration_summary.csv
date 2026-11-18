@@ -1,0 +1,13 @@
+cohort,model,n_images,prevalence,mean_predicted,citl,calibration_intercept,calibration_slope,nll,brier,ece15
+RSNA locked test,inception_v3,5337,0.2252,0.2504,0.0252,-0.2878,0.9269,0.3357,0.1051,0.0275
+RSNA locked test,swin_b,5337,0.2252,0.2545,0.0293,-0.3029,0.949,0.3275,0.1041,0.0296
+RSNA locked test,mean_fusion,5337,0.2252,0.2462,0.021,-0.2331,0.9533,0.3195,0.1009,0.0218
+RSNA locked test,const_alpha,5337,0.2252,0.2465,0.0213,-0.2358,0.9538,0.3193,0.1008,0.0218
+RSNA locked test,gated_fusion,5337,0.2252,0.2457,0.0205,-0.2275,0.9548,0.3192,0.1008,0.0209
+RSNA locked test,logit_stack,5337,0.2252,0.2277,0.0025,-0.0279,0.9961,0.3175,0.0999,0.0107
+KermanyNorm,inception_v3,624,0.625,0.2397,-0.3853,2.4803,1.2816,0.9357,0.3391,0.3853
+KermanyNorm,swin_b,624,0.625,0.2591,-0.3659,3.7971,1.8969,0.7595,0.2756,0.3659
+KermanyNorm,mean_fusion,624,0.625,0.2358,-0.3892,4.0098,2.076,0.8416,0.3102,0.3892
+KermanyNorm,const_alpha,624,0.625,0.2371,-0.3879,4.0778,2.1054,0.8324,0.3067,0.3879
+KermanyNorm,gated_fusion,624,0.625,0.2352,-0.3898,4.1157,2.1194,0.8368,0.3086,0.3898
+KermanyNorm,logit_stack,624,0.625,0.2096,-0.4154,4.5537,2.1992,0.9112,0.3371,0.4154

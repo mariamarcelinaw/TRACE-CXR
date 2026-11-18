@@ -1,0 +1,45 @@
+experiment:
+  name: trace_cxr_inception_swinb_v2
+  version: 2.0.0
+  schema: trace_cxr_transport_v2
+  seed: 20260908
+  image_size: 320
+
+paths:
+  rsna_labels_csv: /path/to/rsna/stage_2_train_labels.csv
+  rsna_dicom_dir: /path/to/rsna/stage_2_train_images
+  kermany_root: /path/to/kermany/chest_xray/test
+  output_dir: outputs/trace_cxr_inception_swinb_v2
+
+split:
+  development_fraction: 0.70
+  calibration_fraction: 0.10
+  test_fraction: 0.20
+  oof_folds: 5
+
+training:
+  epochs: 60
+  batch_size: 4
+  gradient_accumulation_steps: 4
+  num_workers: 4
+  lr_inception: 0.0001
+  lr_swin: 0.00005
+  min_lr: 0.000001
+  weight_decay: 0.0001
+  mixed_precision: true
+  inception_aux_weight: 0.4
+  final_holdout_fraction: 0.12
+
+fusion:
+  hidden_dim: 16
+  epochs: 60
+  lr: 0.001
+  weight_decay: 0.0001
+
+statistics:
+  bootstrap_iterations: 2000
+  alpha: 0.05
+
+xai:
+  enabled: true
+  cases_per_group: 3

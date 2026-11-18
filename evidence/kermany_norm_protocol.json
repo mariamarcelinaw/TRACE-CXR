@@ -1,0 +1,18 @@
+{
+  "created_utc": "20260925T031058Z",
+  "issue": "read_cxr normalizes DICOM intensities (percentile 0.5-99.5 stretch) but not raster images; all RSNA images are DICOM, all Kermany images are JPEG.",
+  "change": "apply the identical normalization (trace_cxr._to_uint8) to Kermany images at inference",
+  "unchanged": [
+    "backbone weights",
+    "gate",
+    "temperatures",
+    "thresholds",
+    "RSNA results"
+  ],
+  "kermany_labels_used_for_fitting": false,
+  "decision_rule": "Adopted on the principle of consistent preprocessing, decided before seeing the new results; both versions are reported whatever the direction of the change.",
+  "n_images": 624,
+  "n_patients": 427,
+  "recheck_max_abs_diff": 0.0,
+  "completed_utc": "2026-09-25T03:14:45.173762+00:00"
+}

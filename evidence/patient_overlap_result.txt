@@ -1,0 +1,43 @@
+mapping entries 30000; split rows 26684; unmapped 0
+NIH patients in all 26684 images: 11452
+  development  patients 9150
+  calibration  patients 2125
+  locked_test  patients 3727
+locked-test images 5337: patient also in development 3645 (68.3%); in development or calibration 3739 (70.1%)
+check: full-test gate AUC 0.9020 (paper 0.9020)
+
+== FULL locked test | bootstrap unit: image | n=5337 images, 3727 patients, 1202 positive (prevalence 0.225), valid resamples 2000 ==
+  AUC inception_v3  0.8920 [0.8821, 0.9018]
+  AUC swin_b        0.8977 [0.8882, 0.9068]
+  AUC mean_fusion   0.9018 [0.8924, 0.9109]
+  AUC gated_fusion  0.9020 [0.8926, 0.9110]
+  AUC const_alpha   0.9020 [0.8926, 0.9111]
+  AUC logit_stack   0.9020 [0.8926, 0.9111]
+  dAUC gate - swin_b        +0.0043 [+0.0018, +0.0067]
+  dAUC gate - mean_fusion   +0.0001 [-0.0001, +0.0004]
+  dAUC gate - const_alpha   -0.0000 [-0.0001, +0.0000]
+  dAUC gate - inception_v3  +0.0100 [+0.0068, +0.0132]
+
+== FULL locked test | bootstrap unit: patient | n=5337 images, 3727 patients, 1202 positive (prevalence 0.225), valid resamples 2000 ==
+  AUC inception_v3  0.8920 [0.8812, 0.9026]
+  AUC swin_b        0.8977 [0.8880, 0.9081]
+  AUC mean_fusion   0.9018 [0.8919, 0.9118]
+  AUC gated_fusion  0.9020 [0.8921, 0.9119]
+  AUC const_alpha   0.9020 [0.8922, 0.9119]
+  AUC logit_stack   0.9020 [0.8922, 0.9118]
+  dAUC gate - swin_b        +0.0043 [+0.0018, +0.0070]
+  dAUC gate - mean_fusion   +0.0001 [-0.0001, +0.0004]
+  dAUC gate - const_alpha   -0.0000 [-0.0001, +0.0000]
+  dAUC gate - inception_v3  +0.0100 [+0.0066, +0.0134]
+
+== CLEAN subset (patients not in development/calibration) | bootstrap unit: patient | n=1598 images, 1497 patients, 121 positive (prevalence 0.076), valid resamples 2000 ==
+  AUC inception_v3  0.9016 [0.8759, 0.9252]
+  AUC swin_b        0.9035 [0.8798, 0.9258]
+  AUC mean_fusion   0.9138 [0.8914, 0.9344]
+  AUC gated_fusion  0.9138 [0.8916, 0.9342]
+  AUC const_alpha   0.9137 [0.8916, 0.9341]
+  AUC logit_stack   0.9138 [0.8917, 0.9337]
+  dAUC gate - swin_b        +0.0103 [+0.0022, +0.0197]
+  dAUC gate - mean_fusion   -0.0000 [-0.0010, +0.0009]
+  dAUC gate - const_alpha   +0.0001 [-0.0002, +0.0003]
+  dAUC gate - inception_v3  +0.0122 [-0.0008, +0.0262]
